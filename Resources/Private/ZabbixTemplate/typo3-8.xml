@@ -501,10 +501,11 @@
                     <verify_peer>YES</verify_peer>
                 </item>
                 <item>
-                    <name>TYPO3 total log files size (KB)</name>
+                    <name>TYPO3 total log files size</name>
                     <type>HTTP_AGENT</type>
                     <key>typo3_GetTotalLogFilesSize</key>
                     <delay>15m</delay>
+                    <units>B</units>
                     <applications>
                         <application>
                             <name>TYPO3</name>
@@ -529,7 +530,7 @@
                     <verify_peer>YES</verify_peer>
                     <triggers>
                         <trigger>
-                            <expression>{last()}&gt;10000</expression>
+                            <expression>{last()}&gt;10M</expression>
                             <name>TYPO3 log files size is too big</name>
                             <priority>WARNING</priority>
                         </trigger>
@@ -644,6 +645,7 @@
                     <type>HTTP_AGENT</type>
                     <key>typo3_GetZabbixLogFileSize</key>
                     <delay>5m</delay>
+                    <units>B</units>
                     <applications>
                         <application>
                             <name>TYPO3</name>
