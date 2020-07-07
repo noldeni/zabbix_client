@@ -645,6 +645,7 @@
                     <type>HTTP_AGENT</type>
                     <key>typo3_GetZabbixLogFileSize</key>
                     <delay>5m</delay>
+                    <units>B</units>
                     <applications>
                         <application>
                             <name>TYPO3</name>
